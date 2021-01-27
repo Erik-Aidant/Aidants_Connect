@@ -244,6 +244,19 @@ pre-commit install
 
 ### Ré-initialiser la base de données
 
+#### Avec les données de test (_fixtures_) : Utiliser le Makefile
+
+Pour simplifier le lancement de certaines commandes, un Makefile est disponible. Exemples de commandes :
+
+```shell
+make destroy-rebuild-dev-db
+```
+
+Sur Windows, la commande `make` n'est pas disponible ; 
+Il faut passer chaque commande du `Makefile` (fichier présent à la racine du projet) les unes après les autres.
+
+#### Avec des données existantes
+
 Si vous avez des données existantes, vous pouvez d'abord les sauvegarder :
 
 ```shell
@@ -295,16 +308,6 @@ Pour ce faire, il suffit d'exécuter ou de planifier la commande suivante :
 
 ```shell
 python manage.py delete_expired_connections
-```
-
-### Utiliser le Makefile
-
-Pour simplifier le lancement de certaines commandes, un Makefile est disponible. Exemples de commandes :
-
-```shell
-make shell
-make test
-make migrate
 ```
 
 ### Calcul de `HASH_FC_AS_FI_SECRET` à partir de la valeur de `FC_AS_FI_SECRET`    
