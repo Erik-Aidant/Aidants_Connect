@@ -124,6 +124,27 @@ Appliquez les migrations de la base de données :
 python manage.py migrate
 ```
 
+### Peupler la base de données
+
+Il existe plusieurs moyens de peupler la base de donnée.
+
+#### Installation en local pour test : utiliser les _fixtures_
+
+Des données de test qui créent un environnement complet : 
+  ```shell
+    python manage.py loaddata admin.json
+    python manage.py loaddata usager_autorisation.json
+  ```
+    
+Ces fixtures créent un _superuser_ rattaché à une `Organisation` `BetaGouv`:
+    * identifiant : `admin@email.com`;
+    * mot de passe : `admin`;
+    * Static OTP : `111111`.
+
+Vous pouvez vous connecter à l'admin du site avec les données ci-dessus, et récupérer le QR code du TOTP device associé à ce compte.
+
+#### Installation sur un serveur : Créer un _superuser_
+
 Créez un _superuser_ :
 
 ```shell
@@ -255,16 +276,6 @@ Enfin, chargez les données :
 
     ```shell
     python manage.py loaddata db.json
-    ```
-
-- Soit des données de test qui créent aussi un _superuser_ rattaché à une `Organisation` `BetaGouv`:
-    * identifiant : `admin@email.com`;
-    * mot de passe : `admin`;
-    * Static OTP : `111111`.
-
-    ```shell
-    python manage.py loaddata admin.json
-    python manage.py loaddata usager_autorisation.json
     ```
 
 - Soit repartir de zéro en recréant un _superuser_ (plus de détails dans la section [Installer l'application](#installer-lapplication)) :
