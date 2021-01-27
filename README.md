@@ -9,7 +9,7 @@ Aidants Connect est une application web qui propose à des aidants les fonctionn
 - accéder à un suivi de ses mandats.
 
 ## Sommaire
-1. Pile technique
+1. [Pile technique](#pile-technique)
 2. Installer et lancer l'application
    2.1. Installer la base de données (pour Mac OSX)
    2.2. Installer l'application
