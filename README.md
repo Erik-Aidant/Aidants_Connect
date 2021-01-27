@@ -8,6 +8,25 @@ Aidants Connect est une application web qui propose à des aidants les fonctionn
 - accéder à des ressources sur l'accompagnement des usagers ;
 - accéder à un suivi de ses mandats.
 
+## Sommaire
+1. Pile technique
+2. Installer et lancer l'application
+   2.1. Installer la base de données (pour Mac OSX)
+   2.2. Installer l'application
+   2.3. Peupler la base de données
+    2.3.1 Installation en local pour test : utiliser les _fixtures_
+    2.3.2 Installation sur un serveur : Créer un _superuser_
+   2.4. Lancer l'application
+   2.5. Se connecter à l'application : authentification à double facteur (2FA)
+3. Lancer les tests
+4. Contribuer à l'application
+5. Annexes
+  5.1. Documentation de FranceConnect
+  5.2. Ré-initialiser la base de données
+  5.3. Purger les connexions expirées
+  5.4. Utiliser le Makefile
+  5.5. Calcul de `HASH_FC_AS_FI_SECRET` à partir de la valeur de `FC_AS_FI_SECRET` 
+   
 ## Pile technique
 
 - Python 3.7
